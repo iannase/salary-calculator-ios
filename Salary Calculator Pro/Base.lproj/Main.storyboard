@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E175b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Salary-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Salary_Calculator_Pro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f8R-3I-uc6">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="q" translatesAutoresizingMaskIntoConstraints="NO" id="TBq-Up-uCk">
+                                        <rect key="frame" x="0.0" y="-318" width="768" height="1960"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1960" id="fkZ-eT-y8n"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hourly Pay $:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jin-Rt-fFd">
+                                        <rect key="frame" x="0.0" y="61" width="768" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salary Calcuator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDJ-e9-0iD">
+                                        <rect key="frame" x="0.0" y="20" width="768" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="10.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cG1-7i-4lD">
+                                        <rect key="frame" x="335.5" y="90" width="97" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="97" id="2Yd-G5-i65"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="28"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="Calculate:" destination="9pv-A4-QxB" eventType="valueChanged" id="Hea-JB-QdC"/>
+                                            <action selector="doneEditing:" destination="9pv-A4-QxB" eventType="editingDidEnd" id="O0u-2C-wNh"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fp5-o1-RMk">
+                                        <rect key="frame" x="384.5" y="260" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00 Per Minute" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvK-fv-NW0">
+                                        <rect key="frame" x="0.0" y="213" width="768" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00 Per Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0Z-Lf-MwY">
+                                        <rect key="frame" x="0.0" y="282" width="768" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                        <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00 Per Week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Umu-qE-wwp">
+                                        <rect key="frame" x="0.0" y="317" width="768" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00 Per Month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Pz-ow-54L">
+                                        <rect key="frame" x="0.0" y="352" width="768" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00 Per Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9T-QI-KcT">
+                                        <rect key="frame" x="0.0" y="387" width="768" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                        <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00 Per Decade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmK-bi-0Aq">
+                                        <rect key="frame" x="0.0" y="422" width="768" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRa-BO-3CT">
+                                        <rect key="frame" x="8" y="132" width="752" height="38"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="x49-0U-p1g"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                        <state key="normal" title="Calculate">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="calculate:" destination="9pv-A4-QxB" eventType="touchUpInside" id="EeG-9I-XC9"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00 Per Second" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keR-8H-98f">
+                                        <rect key="frame" x="0.0" y="178" width="768" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                        <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00 Per Hour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oL0-bl-dRQ">
+                                        <rect key="frame" x="0.0" y="247" width="768" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00 Per 50 Years" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48P-ZC-0TK">
+                                        <rect key="frame" x="0.0" y="457" width="768" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="27" id="v1x-wl-Kpz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.96862745098039216" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="pDJ-e9-0iD" firstAttribute="centerX" secondItem="f8R-3I-uc6" secondAttribute="centerX" id="0PD-jZ-gBV"/>
+                                    <constraint firstItem="oL0-bl-dRQ" firstAttribute="trailing" secondItem="K0Z-Lf-MwY" secondAttribute="trailing" id="4MN-D1-NoV"/>
+                                    <constraint firstItem="DmK-bi-0Aq" firstAttribute="top" secondItem="U9T-QI-KcT" secondAttribute="bottom" constant="8" symbolic="YES" id="4e2-K4-JaW"/>
+                                    <constraint firstItem="cRa-BO-3CT" firstAttribute="top" secondItem="cG1-7i-4lD" secondAttribute="bottom" constant="8" symbolic="YES" id="5rM-K5-beS"/>
+                                    <constraint firstItem="TBq-Up-uCk" firstAttribute="leading" secondItem="oL0-bl-dRQ" secondAttribute="leading" id="6Jg-Xh-giL"/>
+                                    <constraint firstItem="MvK-fv-NW0" firstAttribute="trailing" secondItem="oL0-bl-dRQ" secondAttribute="trailing" id="9Tx-c0-mWw"/>
+                                    <constraint firstItem="oL0-bl-dRQ" firstAttribute="top" secondItem="MvK-fv-NW0" secondAttribute="bottom" constant="7" id="9dl-1w-YdD"/>
+                                    <constraint firstItem="TBq-Up-uCk" firstAttribute="top" secondItem="f8R-3I-uc6" secondAttribute="top" constant="-318" id="AY5-dR-l2U"/>
+                                    <constraint firstItem="6Pz-ow-54L" firstAttribute="leading" secondItem="U9T-QI-KcT" secondAttribute="leading" id="Af7-Dk-vi2"/>
+                                    <constraint firstItem="DmK-bi-0Aq" firstAttribute="trailing" secondItem="48P-ZC-0TK" secondAttribute="trailing" id="Bim-L0-NDy"/>
+                                    <constraint firstItem="oL0-bl-dRQ" firstAttribute="centerY" secondItem="Fp5-o1-RMk" secondAttribute="centerY" id="Bln-07-0NK"/>
+                                    <constraint firstItem="MvK-fv-NW0" firstAttribute="top" secondItem="keR-8H-98f" secondAttribute="bottom" constant="8" symbolic="YES" id="DrA-RH-Ftr"/>
+                                    <constraint firstItem="DmK-bi-0Aq" firstAttribute="leading" secondItem="48P-ZC-0TK" secondAttribute="leading" id="G2w-ph-vuS"/>
+                                    <constraint firstItem="MvK-fv-NW0" firstAttribute="leading" secondItem="oL0-bl-dRQ" secondAttribute="leading" id="K9C-wR-Dd6"/>
+                                    <constraint firstItem="Umu-qE-wwp" firstAttribute="trailing" secondItem="6Pz-ow-54L" secondAttribute="trailing" id="MrE-hs-RFF"/>
+                                    <constraint firstItem="pDJ-e9-0iD" firstAttribute="trailing" secondItem="jin-Rt-fFd" secondAttribute="trailing" id="PPP-dk-cmd"/>
+                                    <constraint firstItem="jin-Rt-fFd" firstAttribute="trailing" secondItem="keR-8H-98f" secondAttribute="trailing" id="PWI-e4-gnH"/>
+                                    <constraint firstItem="oL0-bl-dRQ" firstAttribute="leading" secondItem="K0Z-Lf-MwY" secondAttribute="leading" id="PbO-Nl-hCx"/>
+                                    <constraint firstItem="pDJ-e9-0iD" firstAttribute="leading" secondItem="f8R-3I-uc6" secondAttribute="leading" id="QXd-0Y-PSQ"/>
+                                    <constraint firstItem="oL0-bl-dRQ" firstAttribute="centerX" secondItem="Fp5-o1-RMk" secondAttribute="centerX" id="R9S-c7-HLF"/>
+                                    <constraint firstItem="cRa-BO-3CT" firstAttribute="leading" secondItem="f8R-3I-uc6" secondAttribute="leadingMargin" id="RxK-Z2-Wkm"/>
+                                    <constraint firstItem="keR-8H-98f" firstAttribute="top" secondItem="cRa-BO-3CT" secondAttribute="bottom" constant="8" symbolic="YES" id="Tea-Kn-NM7"/>
+                                    <constraint firstItem="cG1-7i-4lD" firstAttribute="top" secondItem="jin-Rt-fFd" secondAttribute="bottom" constant="8" symbolic="YES" id="U96-fi-pny"/>
+                                    <constraint firstItem="TBq-Up-uCk" firstAttribute="trailing" secondItem="Umu-qE-wwp" secondAttribute="trailing" id="UWb-wI-EeL"/>
+                                    <constraint firstItem="6Pz-ow-54L" firstAttribute="top" secondItem="Umu-qE-wwp" secondAttribute="bottom" constant="8" symbolic="YES" id="XME-Xs-eT5"/>
+                                    <constraint firstItem="keR-8H-98f" firstAttribute="leading" secondItem="MvK-fv-NW0" secondAttribute="leading" id="YL8-52-Ppo"/>
+                                    <constraint firstItem="keR-8H-98f" firstAttribute="trailing" secondItem="MvK-fv-NW0" secondAttribute="trailing" id="Z0V-2z-2r1"/>
+                                    <constraint firstItem="48P-ZC-0TK" firstAttribute="top" secondItem="DmK-bi-0Aq" secondAttribute="bottom" constant="8" id="bc6-lX-gfu"/>
+                                    <constraint firstItem="pDJ-e9-0iD" firstAttribute="top" secondItem="f8R-3I-uc6" secondAttribute="top" constant="20" id="ffG-yg-NpY"/>
+                                    <constraint firstItem="K0Z-Lf-MwY" firstAttribute="leading" secondItem="Umu-qE-wwp" secondAttribute="leading" id="gJs-EG-gLl"/>
+                                    <constraint firstItem="cRa-BO-3CT" firstAttribute="centerX" secondItem="keR-8H-98f" secondAttribute="centerX" id="hEB-B2-9Ta"/>
+                                    <constraint firstItem="U9T-QI-KcT" firstAttribute="trailing" secondItem="DmK-bi-0Aq" secondAttribute="trailing" id="hZp-jX-eXc"/>
+                                    <constraint firstAttribute="trailing" secondItem="pDJ-e9-0iD" secondAttribute="trailing" id="iXA-hL-uK1"/>
+                                    <constraint firstItem="6Pz-ow-54L" firstAttribute="trailing" secondItem="U9T-QI-KcT" secondAttribute="trailing" id="iaO-LX-3Wd"/>
+                                    <constraint firstItem="pDJ-e9-0iD" firstAttribute="leading" secondItem="jin-Rt-fFd" secondAttribute="leading" id="kU1-Gv-D9e"/>
+                                    <constraint firstItem="jin-Rt-fFd" firstAttribute="centerX" secondItem="cG1-7i-4lD" secondAttribute="centerX" id="kXx-9o-PeF"/>
+                                    <constraint firstItem="jin-Rt-fFd" firstAttribute="leading" secondItem="keR-8H-98f" secondAttribute="leading" id="mLZ-QX-MQO"/>
+                                    <constraint firstItem="K0Z-Lf-MwY" firstAttribute="trailing" secondItem="Umu-qE-wwp" secondAttribute="trailing" id="orP-Fp-uel"/>
+                                    <constraint firstItem="U9T-QI-KcT" firstAttribute="leading" secondItem="DmK-bi-0Aq" secondAttribute="leading" id="qt6-bH-ECW"/>
+                                    <constraint firstItem="U9T-QI-KcT" firstAttribute="top" secondItem="6Pz-ow-54L" secondAttribute="bottom" constant="8" symbolic="YES" id="tZ1-9J-ikm"/>
+                                    <constraint firstAttribute="bottom" secondItem="48P-ZC-0TK" secondAttribute="bottom" constant="540" id="tro-Wc-6Kc"/>
+                                    <constraint firstItem="jin-Rt-fFd" firstAttribute="top" secondItem="pDJ-e9-0iD" secondAttribute="bottom" constant="8" symbolic="YES" id="vCV-fs-TXJ"/>
+                                    <constraint firstItem="K0Z-Lf-MwY" firstAttribute="top" secondItem="oL0-bl-dRQ" secondAttribute="bottom" constant="8" symbolic="YES" id="yl6-q9-sD1"/>
+                                    <constraint firstItem="Umu-qE-wwp" firstAttribute="leading" secondItem="6Pz-ow-54L" secondAttribute="leading" id="zO5-xz-DL8"/>
+                                    <constraint firstItem="Umu-qE-wwp" firstAttribute="top" secondItem="K0Z-Lf-MwY" secondAttribute="bottom" constant="8" symbolic="YES" id="zam-Wm-vPM"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="f8R-3I-uc6" secondAttribute="trailing" id="NDi-9U-n69"/>
+                            <constraint firstAttribute="bottom" secondItem="f8R-3I-uc6" secondAttribute="bottom" id="RCM-N7-sv7"/>
+                            <constraint firstItem="f8R-3I-uc6" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="YdF-97-hc1"/>
+                            <constraint firstItem="f8R-3I-uc6" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="wi8-x3-yX7"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Salary" image="Coins-30" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="calcButton" destination="cRa-BO-3CT" id="4DG-sE-UWJ"/>
+                        <outlet property="dayLabel" destination="K0Z-Lf-MwY" id="ZU6-ID-Mqh"/>
+                        <outlet property="decadeLabel" destination="DmK-bi-0Aq" id="BMl-g8-WQq"/>
+                        <outlet property="fiftyLabel" destination="48P-ZC-0TK" id="68t-9l-ger"/>
+                        <outlet property="hourField" destination="cG1-7i-4lD" id="QSC-6g-WjV"/>
+                        <outlet property="hourLabel" destination="oL0-bl-dRQ" id="8bD-jP-aYb"/>
+                        <outlet property="minuteLabel" destination="MvK-fv-NW0" id="zCe-4G-PY4"/>
+                        <outlet property="monthLabel" destination="6Pz-ow-54L" id="AeI-qH-prx"/>
+                        <outlet property="scrollView" destination="f8R-3I-uc6" id="2OK-uK-WDy"/>
+                        <outlet property="secondLabel" destination="keR-8H-98f" id="LmQ-48-AbY"/>
+                        <outlet property="weekLabel" destination="Umu-qE-wwp" id="4EF-kn-22h"/>
+                        <outlet property="yearLabel" destination="U9T-QI-KcT" id="QIm-hi-qcr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="640.625" y="-0.5859375"/>
+        </scene>
+        <!--Facts-->
+        <scene sceneID="gcz-Hi-lSG">
+            <objects>
+                <viewController id="Rvq-e0-LQh" customClass="ThirdViewController" customModule="Salary_Calculator_Pro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ost-e7-zkw"/>
+                        <viewControllerLayoutGuide type="bottom" id="fnN-8m-9F1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NgA-ug-OYC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SaN-pj-yk2">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="q" translatesAutoresizingMaskIntoConstraints="NO" id="XNG-bF-L06">
+                                        <rect key="frame" x="0.0" y="-318" width="768" height="1809"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1809" id="xmk-Ld-0e0"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salary Facts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNR-Kp-keQ">
+                                        <rect key="frame" x="0.0" y="24" width="768" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yearly Salary $:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mst-zP-ZHC">
+                                        <rect key="frame" x="0.0" y="65" width="768" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="25000.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="23D-tN-8yu">
+                                        <rect key="frame" x="8" y="94" width="752" height="34"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="28"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="Calculate:" destination="9pv-A4-QxB" eventType="valueChanged" id="sAd-W9-kQr"/>
+                                            <action selector="doneEditing:" destination="9pv-A4-QxB" eventType="editingDidEnd" id="nXZ-Ky-ngB"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will earn $1,000,000 in:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H50-cd-jxY">
+                                        <rect key="frame" x="0.0" y="182" width="768" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 months and 0 days" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4P-0E-YjZ">
+                                        <rect key="frame" x="0.0" y="217" width="768" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                        <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Salary in Pennies Stacks:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAW-J5-1Jl">
+                                        <rect key="frame" x="0.0" y="252" width="768" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Feet High" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1e8-jL-ho0">
+                                        <rect key="frame" x="0.0" y="287" width="768" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                        <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you save 2% for 5 years:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4h-ZV-OK7">
+                                        <rect key="frame" x="0.0" y="322" width="768" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" $0.00 in Savings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKb-hc-N0C">
+                                        <rect key="frame" x="0.0" y="357" width="768" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                        <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you save 3% for 15 years:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmJ-m0-h7l">
+                                        <rect key="frame" x="0.0" y="392" width="768" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAm-N6-oPH">
+                                        <rect key="frame" x="8" y="136" width="752" height="38"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="l8d-Pd-cWU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                        <state key="normal" title="Calculate">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="calculate:" destination="Rvq-e0-LQh" eventType="touchUpInside" id="eJw-hh-SVh"/>
+                                            <action selector="calculate:" destination="9pv-A4-QxB" eventType="touchUpInside" id="qBR-HR-VUv"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" $0.00 in Savings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7i-Kc-hia">
+                                        <rect key="frame" x="0.0" y="427" width="768" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                        <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="1e8-jL-ho0" firstAttribute="trailing" secondItem="s4h-ZV-OK7" secondAttribute="trailing" id="0hc-5B-PuB"/>
+                                    <constraint firstItem="dmJ-m0-h7l" firstAttribute="trailing" secondItem="j7i-Kc-hia" secondAttribute="trailing" id="28X-3A-bmF"/>
+                                    <constraint firstItem="mst-zP-ZHC" firstAttribute="centerX" secondItem="23D-tN-8yu" secondAttribute="centerX" id="3Ug-dl-bDW"/>
+                                    <constraint firstItem="h4P-0E-YjZ" firstAttribute="trailing" secondItem="yAW-J5-1Jl" secondAttribute="trailing" id="62m-NA-0Wo"/>
+                                    <constraint firstItem="eKb-hc-N0C" firstAttribute="leading" secondItem="dmJ-m0-h7l" secondAttribute="leading" id="66A-r2-Pia"/>
+                                    <constraint firstItem="dmJ-m0-h7l" firstAttribute="leading" secondItem="j7i-Kc-hia" secondAttribute="leading" id="7mA-7a-IOf"/>
+                                    <constraint firstItem="h4P-0E-YjZ" firstAttribute="leading" secondItem="yAW-J5-1Jl" secondAttribute="leading" id="8dR-xD-r4G"/>
+                                    <constraint firstItem="XNG-bF-L06" firstAttribute="leading" secondItem="eKb-hc-N0C" secondAttribute="leading" id="9hH-RQ-Ljb"/>
+                                    <constraint firstAttribute="trailing" secondItem="RNR-Kp-keQ" secondAttribute="trailing" id="9wQ-YI-gXG"/>
+                                    <constraint firstItem="XNG-bF-L06" firstAttribute="trailing" secondItem="1e8-jL-ho0" secondAttribute="trailing" id="A8s-jK-ChM"/>
+                                    <constraint firstItem="yAW-J5-1Jl" firstAttribute="top" secondItem="h4P-0E-YjZ" secondAttribute="bottom" constant="8" symbolic="YES" id="AZy-yJ-mT1"/>
+                                    <constraint firstItem="mst-zP-ZHC" firstAttribute="top" secondItem="RNR-Kp-keQ" secondAttribute="bottom" constant="8" symbolic="YES" id="BCo-5w-9ca"/>
+                                    <constraint firstItem="dmJ-m0-h7l" firstAttribute="top" secondItem="eKb-hc-N0C" secondAttribute="bottom" constant="8" symbolic="YES" id="GPm-41-eM3"/>
+                                    <constraint firstItem="H50-cd-jxY" firstAttribute="leading" secondItem="h4P-0E-YjZ" secondAttribute="leading" id="IF4-bL-ra4"/>
+                                    <constraint firstItem="yAW-J5-1Jl" firstAttribute="leading" secondItem="1e8-jL-ho0" secondAttribute="leading" id="IO8-h3-Ool"/>
+                                    <constraint firstItem="RNR-Kp-keQ" firstAttribute="centerX" secondItem="SaN-pj-yk2" secondAttribute="centerX" id="ISJ-xd-5SP"/>
+                                    <constraint firstItem="WAm-N6-oPH" firstAttribute="top" secondItem="23D-tN-8yu" secondAttribute="bottom" constant="8" symbolic="YES" id="Jq9-Xm-4bH"/>
+                                    <constraint firstItem="H50-cd-jxY" firstAttribute="top" secondItem="WAm-N6-oPH" secondAttribute="bottom" constant="8" symbolic="YES" id="LOW-c7-OzR"/>
+                                    <constraint firstItem="RNR-Kp-keQ" firstAttribute="top" secondItem="SaN-pj-yk2" secondAttribute="top" constant="24" id="Mok-jE-cKP"/>
+                                    <constraint firstItem="1e8-jL-ho0" firstAttribute="leading" secondItem="s4h-ZV-OK7" secondAttribute="leading" id="N1V-xI-aOY"/>
+                                    <constraint firstItem="23D-tN-8yu" firstAttribute="leading" secondItem="WAm-N6-oPH" secondAttribute="leading" id="QkP-fu-vwo"/>
+                                    <constraint firstItem="s4h-ZV-OK7" firstAttribute="leading" secondItem="eKb-hc-N0C" secondAttribute="leading" id="W8y-6t-VsG"/>
+                                    <constraint firstAttribute="bottom" secondItem="j7i-Kc-hia" secondAttribute="bottom" constant="114" id="WPP-En-d6N"/>
+                                    <constraint firstItem="1e8-jL-ho0" firstAttribute="top" secondItem="yAW-J5-1Jl" secondAttribute="bottom" constant="8" symbolic="YES" id="Y1i-Wu-CwO"/>
+                                    <constraint firstItem="23D-tN-8yu" firstAttribute="trailing" secondItem="WAm-N6-oPH" secondAttribute="trailing" id="YWR-ZB-YgB"/>
+                                    <constraint firstItem="mst-zP-ZHC" firstAttribute="trailing" secondItem="H50-cd-jxY" secondAttribute="trailing" id="ZBz-hr-squ"/>
+                                    <constraint firstItem="23D-tN-8yu" firstAttribute="top" secondItem="mst-zP-ZHC" secondAttribute="bottom" constant="8" symbolic="YES" id="bjh-wV-key"/>
+                                    <constraint firstItem="RNR-Kp-keQ" firstAttribute="leading" secondItem="mst-zP-ZHC" secondAttribute="leading" id="c8n-Cu-uD8"/>
+                                    <constraint firstItem="23D-tN-8yu" firstAttribute="leading" secondItem="SaN-pj-yk2" secondAttribute="leadingMargin" id="ghy-tT-I7A"/>
+                                    <constraint firstItem="yAW-J5-1Jl" firstAttribute="trailing" secondItem="1e8-jL-ho0" secondAttribute="trailing" id="hlw-HB-a5v"/>
+                                    <constraint firstItem="H50-cd-jxY" firstAttribute="trailing" secondItem="h4P-0E-YjZ" secondAttribute="trailing" id="iN9-r8-OGa"/>
+                                    <constraint firstItem="eKb-hc-N0C" firstAttribute="top" secondItem="s4h-ZV-OK7" secondAttribute="bottom" constant="8" symbolic="YES" id="kd5-pn-2UY"/>
+                                    <constraint firstItem="j7i-Kc-hia" firstAttribute="top" secondItem="dmJ-m0-h7l" secondAttribute="bottom" constant="8" symbolic="YES" id="nZk-ds-8N2"/>
+                                    <constraint firstItem="s4h-ZV-OK7" firstAttribute="trailing" secondItem="eKb-hc-N0C" secondAttribute="trailing" id="qH5-gK-36f"/>
+                                    <constraint firstItem="mst-zP-ZHC" firstAttribute="leading" secondItem="H50-cd-jxY" secondAttribute="leading" id="qpD-y2-ivT"/>
+                                    <constraint firstItem="RNR-Kp-keQ" firstAttribute="trailing" secondItem="mst-zP-ZHC" secondAttribute="trailing" id="rvI-8C-ale"/>
+                                    <constraint firstItem="eKb-hc-N0C" firstAttribute="trailing" secondItem="dmJ-m0-h7l" secondAttribute="trailing" id="tAP-y3-AVW"/>
+                                    <constraint firstItem="s4h-ZV-OK7" firstAttribute="top" secondItem="1e8-jL-ho0" secondAttribute="bottom" constant="8" symbolic="YES" id="teP-pQ-kHh"/>
+                                    <constraint firstItem="XNG-bF-L06" firstAttribute="top" secondItem="SaN-pj-yk2" secondAttribute="top" constant="-318" id="ySK-Ct-F92"/>
+                                    <constraint firstItem="h4P-0E-YjZ" firstAttribute="top" secondItem="H50-cd-jxY" secondAttribute="bottom" constant="8" symbolic="YES" id="yzx-Em-GsM"/>
+                                    <constraint firstItem="RNR-Kp-keQ" firstAttribute="leading" secondItem="SaN-pj-yk2" secondAttribute="leading" id="zSM-mt-GHy"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="SaN-pj-yk2" secondAttribute="trailing" id="7ca-3m-Epb"/>
+                            <constraint firstItem="SaN-pj-yk2" firstAttribute="top" secondItem="NgA-ug-OYC" secondAttribute="top" id="JsG-bd-01O"/>
+                            <constraint firstAttribute="bottom" secondItem="SaN-pj-yk2" secondAttribute="bottom" id="uSv-f4-3WB"/>
+                            <constraint firstItem="SaN-pj-yk2" firstAttribute="leading" secondItem="NgA-ug-OYC" secondAttribute="leading" id="xCp-aI-fyc"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Facts" image="Dossier-30" id="mNU-ag-78A"/>
+                    <connections>
+                        <outlet property="calcButton" destination="WAm-N6-oPH" id="zY5-Kr-fnq"/>
+                        <outlet property="fifteenYearLabel" destination="j7i-Kc-hia" id="c5n-vQ-aHd"/>
+                        <outlet property="fiveYearLabel" destination="eKb-hc-N0C" id="2Kz-hM-LuB"/>
+                        <outlet property="millionLabel" destination="h4P-0E-YjZ" id="ZqE-7a-heg"/>
+                        <outlet property="pennyLabel" destination="1e8-jL-ho0" id="P85-MY-dth"/>
+                        <outlet property="salaryField" destination="23D-tN-8yu" id="CkU-yf-uib"/>
+                        <outlet property="scrollView" destination="SaN-pj-yk2" id="BR3-bC-29A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N2F-dw-n5O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1906.25" y="0.0"/>
+        </scene>
+        <!--Saving-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Salary_Calculator_Pro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OOb-86-3a9">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="q" translatesAutoresizingMaskIntoConstraints="NO" id="kxo-LU-64h">
+                                        <rect key="frame" x="0.0" y="-310" width="768" height="1805"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1805" id="pqu-ag-Z5j"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paycheck Savings Planner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tb-8h-2VU">
+                                        <rect key="frame" x="0.0" y="26" width="768" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount to Save $:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tC2-DB-jmP">
+                                        <rect key="frame" x="0.0" y="67" width="768" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="5000.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ekv-eF-ik3">
+                                        <rect key="frame" x="0.0" y="96" width="768" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="GBS-Da-33U"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="28"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="Calculate:" destination="9pv-A4-QxB" eventType="valueChanged" id="ogz-Lj-hT9"/>
+                                            <action selector="doneEditing:" destination="9pv-A4-QxB" eventType="editingDidEnd" id="cm5-e5-XWA"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In How Many Weeks:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVn-Zb-js8">
+                                        <rect key="frame" x="0.0" y="134" width="768" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="10" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SFf-Lg-zbh">
+                                        <rect key="frame" x="0.0" y="163" width="768" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="lyP-Oi-Ox0"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="28"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="Calculate:" destination="9pv-A4-QxB" eventType="valueChanged" id="9Ig-lW-wzt"/>
+                                            <action selector="doneEditing:" destination="9pv-A4-QxB" eventType="editingDidEnd" id="YIf-BC-pGD"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paycheck:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVk-eY-8lT">
+                                        <rect key="frame" x="0.0" y="201" width="768" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d25-9c-bRz">
+                                        <rect key="frame" x="0.0" y="230" width="768" height="78"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="78" id="e7X-RN-iw0"/>
+                                        </constraints>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YdT-7k-O0O">
+                                        <rect key="frame" x="8" y="316" width="752" height="38"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="tm0-wC-ucD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                        <state key="normal" title="Calculate">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="calculate:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="ZsD-aQ-KRu"/>
+                                            <action selector="calculate:" destination="9pv-A4-QxB" eventType="touchUpInside" id="agz-Ae-aUG"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6e-OZ-RQQ">
+                                        <rect key="frame" x="0.0" y="362" width="768" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="q0D-BP-tjW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="36"/>
+                                        <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Per Paycheck" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sca-UR-psr">
+                                        <rect key="frame" x="0.0" y="422" width="768" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9tb-8h-2VU" firstAttribute="leading" secondItem="tC2-DB-jmP" secondAttribute="leading" id="0M5-QA-xLi"/>
+                                    <constraint firstItem="ekv-eF-ik3" firstAttribute="trailing" secondItem="DVn-Zb-js8" secondAttribute="trailing" id="1Mv-jJ-hEn"/>
+                                    <constraint firstItem="tC2-DB-jmP" firstAttribute="leading" secondItem="ekv-eF-ik3" secondAttribute="leading" id="3ax-D6-Umv"/>
+                                    <constraint firstItem="ekv-eF-ik3" firstAttribute="leading" secondItem="DVn-Zb-js8" secondAttribute="leading" id="40I-Bu-KcK"/>
+                                    <constraint firstItem="kxo-LU-64h" firstAttribute="trailing" secondItem="tC2-DB-jmP" secondAttribute="trailing" id="49l-2r-nXT"/>
+                                    <constraint firstItem="a6e-OZ-RQQ" firstAttribute="top" secondItem="YdT-7k-O0O" secondAttribute="bottom" constant="8" symbolic="YES" id="5Lx-bL-9zg"/>
+                                    <constraint firstItem="9tb-8h-2VU" firstAttribute="trailing" secondItem="tC2-DB-jmP" secondAttribute="trailing" id="AZV-t1-uZj"/>
+                                    <constraint firstAttribute="bottom" secondItem="Sca-UR-psr" secondAttribute="bottom" constant="70" id="AeE-bw-xzr"/>
+                                    <constraint firstItem="SFf-Lg-zbh" firstAttribute="trailing" secondItem="YVk-eY-8lT" secondAttribute="trailing" id="Bfb-EG-N6c"/>
+                                    <constraint firstItem="YVk-eY-8lT" firstAttribute="leading" secondItem="d25-9c-bRz" secondAttribute="leading" id="Bn7-En-yqo"/>
+                                    <constraint firstItem="d25-9c-bRz" firstAttribute="centerX" secondItem="kxo-LU-64h" secondAttribute="centerX" id="DvH-O0-BQ3"/>
+                                    <constraint firstItem="kxo-LU-64h" firstAttribute="leading" secondItem="tC2-DB-jmP" secondAttribute="leading" id="Eim-V5-9n8"/>
+                                    <constraint firstAttribute="trailing" secondItem="9tb-8h-2VU" secondAttribute="trailing" id="F4q-Xp-d3d"/>
+                                    <constraint firstItem="9tb-8h-2VU" firstAttribute="top" secondItem="OOb-86-3a9" secondAttribute="top" constant="26" id="GlW-0M-PRU"/>
+                                    <constraint firstItem="SFf-Lg-zbh" firstAttribute="leading" secondItem="YVk-eY-8lT" secondAttribute="leading" id="IGV-xY-Y9e"/>
+                                    <constraint firstItem="DVn-Zb-js8" firstAttribute="leading" secondItem="SFf-Lg-zbh" secondAttribute="leading" id="JCe-dA-dpa"/>
+                                    <constraint firstItem="9tb-8h-2VU" firstAttribute="leading" secondItem="OOb-86-3a9" secondAttribute="leading" id="L8U-Lu-TP9"/>
+                                    <constraint firstItem="YdT-7k-O0O" firstAttribute="top" secondItem="d25-9c-bRz" secondAttribute="bottom" constant="8" symbolic="YES" id="M7Q-CJ-kS4"/>
+                                    <constraint firstItem="tC2-DB-jmP" firstAttribute="top" secondItem="9tb-8h-2VU" secondAttribute="bottom" constant="8" symbolic="YES" id="NV4-9K-L78"/>
+                                    <constraint firstItem="Sca-UR-psr" firstAttribute="top" secondItem="a6e-OZ-RQQ" secondAttribute="bottom" constant="8" symbolic="YES" id="Nx3-Ep-jx7"/>
+                                    <constraint firstItem="YdT-7k-O0O" firstAttribute="centerX" secondItem="a6e-OZ-RQQ" secondAttribute="centerX" id="Ovy-gv-Sxw"/>
+                                    <constraint firstItem="SFf-Lg-zbh" firstAttribute="top" secondItem="DVn-Zb-js8" secondAttribute="bottom" constant="8" symbolic="YES" id="Po4-TC-h5h"/>
+                                    <constraint firstItem="tC2-DB-jmP" firstAttribute="trailing" secondItem="ekv-eF-ik3" secondAttribute="trailing" id="PsP-1A-jt9"/>
+                                    <constraint firstItem="d25-9c-bRz" firstAttribute="leading" secondItem="a6e-OZ-RQQ" secondAttribute="leading" id="TSj-lp-aCw"/>
+                                    <constraint firstItem="a6e-OZ-RQQ" firstAttribute="trailing" secondItem="Sca-UR-psr" secondAttribute="trailing" id="Va8-3n-uqX"/>
+                                    <constraint firstItem="kxo-LU-64h" firstAttribute="top" secondItem="OOb-86-3a9" secondAttribute="top" constant="-310" id="WPv-Ko-Lh0"/>
+                                    <constraint firstItem="DVn-Zb-js8" firstAttribute="trailing" secondItem="SFf-Lg-zbh" secondAttribute="trailing" id="Yg0-qi-2yl"/>
+                                    <constraint firstItem="d25-9c-bRz" firstAttribute="top" secondItem="YVk-eY-8lT" secondAttribute="bottom" constant="8" symbolic="YES" id="aNG-Rq-5eB"/>
+                                    <constraint firstItem="DVn-Zb-js8" firstAttribute="top" secondItem="ekv-eF-ik3" secondAttribute="bottom" constant="8" symbolic="YES" id="dyq-OX-qeD"/>
+                                    <constraint firstItem="9tb-8h-2VU" firstAttribute="centerX" secondItem="OOb-86-3a9" secondAttribute="centerX" id="etF-VA-c0j"/>
+                                    <constraint firstItem="a6e-OZ-RQQ" firstAttribute="leading" secondItem="Sca-UR-psr" secondAttribute="leading" id="n3p-RU-rBa"/>
+                                    <constraint firstItem="ekv-eF-ik3" firstAttribute="top" secondItem="tC2-DB-jmP" secondAttribute="bottom" constant="8" symbolic="YES" id="nWZ-5T-xAd"/>
+                                    <constraint firstItem="d25-9c-bRz" firstAttribute="trailing" secondItem="a6e-OZ-RQQ" secondAttribute="trailing" id="p8l-0q-8wd"/>
+                                    <constraint firstItem="YVk-eY-8lT" firstAttribute="top" secondItem="SFf-Lg-zbh" secondAttribute="bottom" constant="8" symbolic="YES" id="rUp-Vv-82V"/>
+                                    <constraint firstItem="YdT-7k-O0O" firstAttribute="leading" secondItem="OOb-86-3a9" secondAttribute="leadingMargin" id="z2F-BH-uFr"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OOb-86-3a9" firstAttribute="bottom" secondItem="Djb-ko-YwX" secondAttribute="top" id="4Vf-Je-8j8"/>
+                            <constraint firstAttribute="trailing" secondItem="OOb-86-3a9" secondAttribute="trailing" id="4cQ-Fs-hRc"/>
+                            <constraint firstItem="OOb-86-3a9" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="ZX9-gE-hfF"/>
+                            <constraint firstItem="OOb-86-3a9" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="hlf-Jf-0lJ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Saving" image="Money Box-30" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="amountToSaveField" destination="ekv-eF-ik3" id="uf3-Gt-lQR"/>
+                        <outlet property="calcButton" destination="YdT-7k-O0O" id="TbQ-57-nir"/>
+                        <outlet property="pickerView" destination="d25-9c-bRz" id="EE7-U4-0pK"/>
+                        <outlet property="savingsLabel" destination="a6e-OZ-RQQ" id="iiY-Pv-aYf"/>
+                        <outlet property="scrollView" destination="OOb-86-3a9" id="q7s-Mp-jam"/>
+                        <outlet property="weeksField" destination="SFf-Lg-zbh" id="z9n-YE-JiW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1285.9375" y="0.0"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="Rvq-e0-LQh" kind="relationship" relationship="viewControllers" id="rob-ga-nz5"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Coins-30" width="30" height="30"/>
+        <image name="Dossier-30" width="30" height="30"/>
+        <image name="Money Box-30" width="30" height="30"/>
+        <image name="q" width="3000" height="3000"/>
+    </resources>
+</document>
